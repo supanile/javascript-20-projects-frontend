@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>50% Discount Coupon</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <h3><i class="fas fa-tags"></i> 50% Discount Coupon</h3>
+        <div class="coupon-container">
+            <input type="text" class="coupon" value="SAVE50" readonly>
+            <button class="btn" id="copyBtn">
+                <i class="far fa-copy"></i> Copy
+            </button>
+        </div>
+        <p class="instructions">Click the button to copy the coupon code</p>
+        <div class="countdown" id="countdown">
+            <span>Offer ends in: </span>
+            <span id="timer">01:00</span>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>

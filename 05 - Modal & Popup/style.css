@@ -1,0 +1,118 @@
+/* Define CSS variables for easy theming and dark mode support */
+:root {
+    --bg-color: #f0f2f5;
+    --text-color: #333;
+    --modal-bg: white;
+    --button-bg: #4CAF50;
+    --button-hover: #45a049;
+    --close-button-bg: #f44336;
+    --close-button-hover: #d32f2f;
+}
+
+/* Dark mode styles */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg-color: #1a1a1a;
+        --text-color: #f0f0f0;
+        --modal-bg: #2a2a2a;
+        --button-bg: #388e3c;
+        --button-hover: #2e7d32;
+        --close-button-bg: #d32f2f;
+        --close-button-hover: #c62828;
+    }
+}
+
+/* Global reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--bg-color);
+    color: var(--text-color);
+    /* Smooth transition for theme changes */
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Button styles */
+button {
+    border: none;
+    background: var(--button-bg);
+    color: white;
+    padding: 12px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background: var(--button-hover);
+}
+
+/* Modal container styles */
+.modal-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+/* Modal styles */
+.modal {
+    background: var(--modal-bg);
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    width: 90%;
+    max-width: 500px;
+    transform: scale(0.8);
+    /* Smooth transition for theme changes and opening/closing */
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.modal h2 {
+    margin-bottom: 15px;
+    color: var(--text-color);
+}
+
+.modal p {
+    margin-bottom: 20px;
+    color: var(--text-color);
+}
+
+/* Show class for modal animation */
+.show {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.show .modal {
+    transform: scale(1);
+}
+
+/* Close button styles */
+.close-btn {
+    background: var(--close-button-bg);
+}
+
+.close-btn:hover {
+    background: var(--close-button-hover);
+}

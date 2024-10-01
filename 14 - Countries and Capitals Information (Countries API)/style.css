@@ -1,0 +1,113 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    color: #333;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #2c3e50;
+    color: #ecf0f1;
+    text-align: center;
+    padding: 2rem 0;
+    margin-bottom: 2rem;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+header p {
+    font-size: 1.1rem;
+    opacity: 0.8;
+    margin-bottom: 1rem;
+}
+
+.country-count {
+    font-size: 1.2rem;
+    font-weight: 700;
+    background-color: rgba(255, 255, 255, 0.1);
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.country {
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    margin: 1rem;
+    padding: 1.5rem;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 250px;
+}
+
+.country:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.country .img-container {
+    width: 150px;
+    height: 100px;
+    margin: 0 auto 1rem;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.country .img-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.country .info {
+    margin-top: 1rem;
+}
+
+.country .name {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.country small {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.country small span {
+    font-weight: 700;
+    color: #333;
+}
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+    background-color: #34495e;
+    color: #ecf0f1;
+}
+
+@media (max-width: 600px) {
+    .country {
+        width: 100%;
+    }
+}

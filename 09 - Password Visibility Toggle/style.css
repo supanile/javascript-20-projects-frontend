@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Kanit', sans-serif;
+    background: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+.container {
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    width: 400px;
+    padding: 30px 40px;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+.form-control {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.form-control input {
+    border: none;
+    border-bottom: 2px solid #f0f0f0;
+    display: block;
+    width: 100%;
+    padding: 15px 0;
+    font-size: 18px;
+    color: #333;
+}
+
+.form-control input:focus,
+.form-control input:valid {
+    outline: none;
+    border-bottom-color: #3498db;
+}
+
+.form-control label {
+    position: absolute;
+    top: 15px;
+    left: 0;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+
+.form-control input:focus ~ label,
+.form-control input:valid ~ label {
+    top: -10px;
+    font-size: 14px;
+    color: #3498db;
+}
+
+.btn {
+    cursor: pointer;
+    display: inline-block;
+    width: 100%;
+    background: #3498db;
+    padding: 15px;
+    font-family: inherit;
+    font-size: 16px;
+    border: 0;
+    border-radius: 5px;
+    color: #fff;
+    transition: all 0.3s;
+}
+
+.btn:hover {
+    background: #2980b9;
+}
+
+.btn:focus {
+    outline: none;
+}
+
+.fa-solid {
+    position: absolute;
+    top: 20px;
+    right: 10px;
+    cursor: pointer;
+    color: #999;
+}
